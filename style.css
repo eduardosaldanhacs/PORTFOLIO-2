@@ -1,0 +1,846 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+body {
+    height: 100vh;
+}
+
+:root {
+    --cor1: rgb(10, 10, 10);
+    --cor2: rgb(15, 15, 15);
+    --cor3: #70e3ea;
+    --cor4: rgb(34, 34, 34);
+}
+
+
+
+
+
+/*---------------------------------------*/
+/*----------CABEÇALHO---------- */
+/*---------------------------------------*/
+header{
+    background-color: var(--cor1);
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    border-bottom: 3px solid gray;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-title h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.header-title h1 span {
+   font-size: 1.1em;
+   margin-top: 5px;
+   color: #70e3ea;
+}
+
+
+nav {
+
+}
+
+
+nav ul {
+    display: flex;
+    gap: 1.5em;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 2ms ease-in;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+nav ul li a:before {
+    content: " ";
+    position: absolute ; 
+    bottom: 0px; 
+    left: 0px;  
+    width: 0px; 
+    height: 1px; 
+    background-color: #70e3ea;
+    transition: all 1.5s ease; 
+}
+nav ul li a:hover:before {
+    width: 100%;
+}
+
+
+
+
+/*---------------------------------------*/
+/*-------------INICIO------------ */
+/*---------------------------------------*/
+.first-section-container {
+    height: 100vh;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.first-section-text {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.first-section-me {
+    
+}
+
+.first-section-me h2 {
+    color: white;
+    margin-bottom: 2px;
+    font-size: 3em;
+}
+
+.first-section-me p {
+    color: #70e3ea;
+    font-size: 2em;
+    margin-bottom: 2px;
+}
+
+.first-section-socialmedia {
+    display: flex;
+    align-items: baseline;
+    text-align: start;
+    padding: 5px 0;
+}
+
+.first-section-socialmedia-list {
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+}
+
+.first-section-socialmedia-list li {
+    background-color: var(--cor4);
+    border-radius: 4px;
+    padding: 2px 2px;
+}
+
+
+.first-section-socialmedia-list a {
+    color: white;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+.first-section-socialmedia-list a:hover {
+    color: #70e3ea;
+    transition: 1s;;
+}
+
+.first-section-container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+
+.first-section-container img:hover {
+    border: 2px solid var(--cor3);
+    transition: 0.5s;
+}
+
+
+.first-section-conhecimentos {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    height: 70%;
+    width: 30%;
+    
+}
+
+h2 {
+    color: white;
+    font-size: 2em;
+}
+
+.first-section-icon {
+
+    padding: 20px;
+    height: 100%;
+}
+
+.first-section-icon p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+    color: var(--cor3);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.first-section-icon i {
+    font-size: 2em;
+    margin-top: 10px;
+
+}
+
+
+
+
+/*---------------------------------------*/
+/*------------SOBRE MIM----------- */
+/*---------------------------------------*/
+.second-section-container {
+    background-color: var(--cor2);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.second-section-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.second-section-text {
+    width: 60%; 
+}
+
+.second-section-text span {
+    color: var(--cor3);
+}
+
+.second-section-container p {
+    color: white;
+    margin: 5px 0;
+    font-size: 1em;
+    padding: 12px;
+    letter-spacing: 0.01em;
+}
+
+
+/*---------------------------------------*/
+/*----------PROJETOS-------------*/
+/*---------------------------------------*/
+.third-section-container {
+    height: 70vh;
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-section-text {
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.third-section-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    
+}
+
+.third-section-projetos {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+.third-section-projetos a {
+    color: white;
+}
+.third-section-projetos h4 {
+    color: var(--cor3);
+    margin-bottom: 8px;
+}
+
+.projeto-item {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto-item-media {
+    border: 1px solid black;
+    box-shadow: var(--cor3) 0px 0px 6px
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.project-links a {
+    margin: 2px;
+    text-decoration: none;
+}
+
+.project-links a span {
+    color: var(--cor3);
+    font-weight: bold;
+}
+/*---------------------------------------*/
+/*----------CERTIFICAÇÕES-------------*/
+/*---------------------------------------*/
+.fourth-section-container {
+    height: 60vh;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+}
+
+.fourth-section-text {
+    padding: 20px;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto; 
+}
+
+.certificacoes-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 12px;
+    width: 100%;
+    height: 90%;
+}
+
+.certificacoes-item {
+    border: 1px solid black;
+    box-shadow: var(--cor3) 0px 0px 6px;
+    padding: 12px;
+    width: 25%;
+    height: 100%;
+}
+
+.certificacoes-item h4 {
+    color: var(--cor3);
+    font-size: 1.4em;
+    padding: 8px;
+    margin-bottom: 20px;
+    height: 25%;
+}
+
+.certificacoes-item li {
+    color: gray;
+    list-style-type: none;
+    font-size: 0.9em;
+    height: 13%;
+    margin: 0 0 1px 0;
+}
+
+.certificacoes-item li a {
+    color: var(--cor3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.certificacoes-item span {
+    color: white;
+}
+
+.fourth-section-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title-icon {
+    color: var(--cor3);
+    margin: 0 8px;
+    font-size: 1.7em;
+}
+/*---------------------------------------*/
+/*---------HABILIDADES----- */
+/*---------------------------------------*/
+.five-section-container {
+    height: 40vh;
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.five-section-text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+}
+
+.five-section-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;    
+}
+
+
+.five-section-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.five-section-list ul {
+    list-style-type: none;
+    display: flex;
+    padding: 12px;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    ;
+   
+}
+
+.five-section-text li {
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.five-section-text li:hover {
+    color: var(--cor3);
+    transition: 0.5s;
+}
+
+
+
+/*---------REDES SOCIAIS----- */
+.six-section-container {
+    height: 40vh;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.six-section-text {
+    width: 70%;
+    margin: 0 auto;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.six-section-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;  
+}
+
+.six-section-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.six-section-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.six-section-list a {
+    color: white;
+    text-decoration: none;
+    margin: 4px;
+    font-size: 1.3em;
+}
+
+.six-section-direitos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    background-color: var(--cor2);
+}
+
+.six-section-direitos p,
+.six-section-direitos svg {
+    color: white;
+    margin: 0 2px;
+}
+
+/*------------MEDIA QUERY 1300px------------*/
+@media (max-width: 1300px) {
+    .first-section-me h2 {
+        font-size: 2em;
+    }
+
+    .first-section-me img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .first-section-icon p,
+    .first-section-icon p, i {
+        font-size: 1.5em;
+    }
+
+    .second-section-text {
+        width: 90%;
+    }
+
+    .second-section-text p {
+        font-size: 0.9em;
+    }
+    .fourth-section-text {
+        width: 90%;
+    }
+    .certificacoes-item h4 {
+        font-size: 1.2em;
+    }
+
+    .certificacoes-item li {
+        font-size: 1em;
+    }
+
+}
+/*------------MEDIA QUERY 1100px------------*/
+@media (max-width: 1100px) {
+    .header-title h1 {
+        font-size: 1.3em;
+    }
+
+    .header-list li a {
+        font-size: 0.8em;
+    }
+
+    .first-section-text {
+        width: 100%;
+    }
+
+    .first-section-me p {
+        font-size: 1.2em;
+    }
+
+    .fourth-section-text {
+        width: 95%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .certificacoes-item {
+        height: 80%;
+    }
+
+    .certificacoes-item h4 {
+        font-size: 0.9em;
+    }
+
+    .certificacoes-item li {
+        font-size: 0.6em;
+        padding: 5px;
+    }
+ 
+    .five-section-text {
+        width: 90%;
+    }
+}
+
+/*------------MEDIA QUERY 900px------------*/
+@media (max-width: 900px) {
+    .header-title h1 {
+        font-size: 1.1em;
+    }
+
+    .header-list {
+        gap: 0.8em;
+    }
+
+    .header-list li a {
+        font-size: 0.7em;
+    }
+
+    .first-section-me {
+        margin-top: 30px;
+    }
+
+    .first-section-text {
+        justify-content: center;
+    }
+
+    .first-section-conhecimentos {
+        width: 40%;
+    }
+
+    .first-section-icon {
+        padding: 0;
+    }
+
+    .first-section-icon p,
+    .first-section-icon i {
+        font-size: 1.6em;
+    }
+    .second-section-text p {
+        font-size: 0.7em;
+    }
+    
+    .second-section-title {
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    .certificacoes-item {
+        padding: 0;
+        height: 80%;
+    }
+
+    .certificacoes-container {
+        padding: 0;
+    }
+
+    .certificacoes-item h4 {
+        font-size: 0.7em;
+    }
+
+    .five-section-list ul {
+        padding: 0;
+    }
+
+    .five-section-list ul li {
+        font-size: 1em;
+    }
+
+    .six-section-list li a {
+        font-size: 1em;
+    }
+}
+/*------------MEDIA QUERY 700px------------*/
+@media (max-width: 700px) {
+
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-title h1 {
+        font-size: 1em;
+    }
+
+    .header-list {
+        gap: 0.7em;
+    }
+
+    .header-list li a {
+        font-size: 0.7em;
+    }
+
+    .first-section-me h2 {
+        font-size: 1.3em;
+    }
+
+    .first-section-me p {
+        font-size: 1.1em;
+    }
+
+    .projeto-item {
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+    }
+
+    .certificacoes-item {
+        height: 70%;
+    }
+    .certificacoes-item li {
+        padding: 2px;
+    }
+
+    .third-section-container {
+        height: 100%;
+    }
+
+    .third-section-projetos {
+
+        flex-wrap: wrap;
+    }
+    
+    .five-section-container {
+        
+    }
+    .five-section-text {
+
+        height: 100%;
+
+    }
+
+    .five-section-list ul {
+        flex-direction: column;
+        margin: 2px;
+    }
+
+    .five-section-list ul li {
+        font-size: 0.85em;
+        padding: 1px;
+    }
+
+
+    .five-section-title {
+        margin-bottom: 20px;
+    }
+
+    .six-section-list li a {
+        font-size: 0.75em;
+    }
+
+    .six-section-direitos p {
+        font-size: 0.8em;
+    }
+}
+
+
+/*------------MEDIA QUERY 550px------------*/
+@media (max-width: 550px) {
+
+
+    .first-section-icon p,
+    .first-section-icon i {
+        font-size: 1.3em;
+    }
+
+    .six-section-list li a {
+        font-size: 0.60em;
+    }
+
+    .certificacoes-item {
+        height: 80%;
+    }
+
+    .certificacoes-item li {
+        padding: 0;
+    }
+
+    .six-section-direitos p {
+        font-size: 0.6em;
+    }
+}
+
+/*------------MEDIA QUERY 450px------------*/
+@media (max-height: 450px) {
+    .container {
+        height: 3500px;
+    }
+    .first-section-conhecimentos {
+        height: 20%;
+    }
+    .second-section {
+        height: 10%;
+    }
+    .third-section-container {
+        height: 50%;
+    }
+
+    .projeto-item {
+        margin: 10px;
+        height: 40%;
+        width: 100%;
+    }
+
+    .third-section-text {
+        height: 90%;
+    }
+
+    .third-section-projetos {
+        height: 50%;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .fourth-section-container {
+        height: 10%;
+    }
+    
+    .certificacoes-item li {
+        font-size: 0.6em;
+    }
+
+    .five-section-container {
+        height: 10%;
+    }
+    .six-section-container {
+        height: 10%;
+    }
+}
+
+
