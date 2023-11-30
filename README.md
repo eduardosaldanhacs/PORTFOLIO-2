@@ -1,2 +1,2 @@
 # PORTIFOLIO-2
-Atualização do portifólio
+Atualização do portfólio
