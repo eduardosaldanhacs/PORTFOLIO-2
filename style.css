@@ -10,6 +10,8 @@
 
 body {
     height: 100vh;
+    background-color: var(--cor1);
+    margin: 0 20px;
 }
 
 :root {
@@ -18,10 +20,6 @@ body {
     --cor3: #70e3ea;
     --cor4: rgb(34, 34, 34);
 }
-
-
-
-
 
 /*---------------------------------------*/
 /*----------CABEÇALHO---------- */
@@ -40,33 +38,26 @@ header{
     height: 100%;
     align-items: center;
     margin: 0 auto;
-    text-align: center;
 }
 
-.header-title h1 {
+.header-title-content h1 {
     color: white;
     text-transform: uppercase;
 }
 
-.header-title h1 span {
+.header-title-content h1 span {
    font-size: 1.1em;
    margin-top: 5px;
    color: #70e3ea;
 }
 
-
-nav {
-
-}
-
-
-nav ul {
+.header-list {
     display: flex;
     gap: 1.5em;
     list-style-type: none;
 }
 
-nav ul li a {
+.header-list-item a {
     color: white;
     text-decoration: none;
     transition: 2ms ease-in;
@@ -74,7 +65,7 @@ nav ul li a {
     padding: 0 0 5px 0;
 }
 
-nav ul li a:before {
+.header-list-item a:before {
     content: " ";
     position: absolute ; 
     bottom: 0px; 
@@ -84,7 +75,8 @@ nav ul li a:before {
     background-color: #70e3ea;
     transition: all 1.5s ease; 
 }
-nav ul li a:hover:before {
+
+.header-list-item a:hover:before {
     width: 100%;
 }
 
@@ -106,10 +98,6 @@ nav ul li a:hover:before {
     display: flex;
     width: 90%;
     justify-content: space-evenly;
-}
-
-.first-section-me {
-    
 }
 
 .first-section-me h2 {
@@ -371,6 +359,14 @@ h2 {
     height: 100%;
 }
 
+.certificacoes-item:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.certificacoes-item:nth-child(3) {
+    transition-delay: 700ms;
+}
+
 .certificacoes-item h4 {
     color: var(--cor3);
     font-size: 1.4em;
@@ -472,7 +468,7 @@ h2 {
 
 
 /*---------REDES SOCIAIS----- */
-.six-section-container {
+.footer-container {
     height: 40vh;
     background-color: var(--cor2);
     display: flex;
@@ -481,7 +477,7 @@ h2 {
     flex-direction: column;
 }
 
-.six-section-text {
+.footer-text {
     width: 70%;
     margin: 0 auto;
     height: 85%;
@@ -489,7 +485,7 @@ h2 {
     align-items: center;
     flex-direction: column;
 }
-.six-section-title {
+.footer-title {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -498,7 +494,7 @@ h2 {
     margin-bottom: 10px;  
 }
 
-.six-section-list {
+.footer-list {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
@@ -507,7 +503,7 @@ h2 {
     height: 70%;
 }
 
-.six-section-list li {
+.footer-list li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,14 +511,14 @@ h2 {
     padding: 12px;
 }
 
-.six-section-list a {
+.footer-list a {
     color: white;
     text-decoration: none;
     margin: 4px;
     font-size: 1.3em;
 }
 
-.six-section-direitos {
+.footer-direitos {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -531,8 +527,8 @@ h2 {
     background-color: var(--cor2);
 }
 
-.six-section-direitos p,
-.six-section-direitos svg {
+.footer-direitos p,
+.footer-direitos svg {
     color: white;
     margin: 0 2px;
 }
@@ -570,6 +566,24 @@ h2 {
     .certificacoes-item li {
         font-size: 1em;
     }
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+
 
 }
 /*------------MEDIA QUERY 1100px------------*/
@@ -680,7 +694,7 @@ h2 {
         font-size: 1em;
     }
 
-    .six-section-list li a {
+    .footer-list li a {
         font-size: 1em;
     }
 }
@@ -760,11 +774,11 @@ h2 {
         margin-bottom: 20px;
     }
 
-    .six-section-list li a {
+    .footer-list li a {
         font-size: 0.75em;
     }
 
-    .six-section-direitos p {
+    .footer-direitos p {
         font-size: 0.8em;
     }
 }
@@ -779,7 +793,7 @@ h2 {
         font-size: 1.3em;
     }
 
-    .six-section-list li a {
+    .footer-list li a {
         font-size: 0.60em;
     }
 
@@ -791,7 +805,7 @@ h2 {
         padding: 0;
     }
 
-    .six-section-direitos p {
+    .footer-direitos p {
         font-size: 0.6em;
     }
 }
@@ -838,7 +852,7 @@ h2 {
     .five-section-container {
         height: 10%;
     }
-    .six-section-container {
+    .footer-container {
         height: 10%;
     }
 }
